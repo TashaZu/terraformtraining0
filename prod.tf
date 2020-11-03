@@ -3,9 +3,13 @@ provider "aws" {
   region = "us-west-2"
   }
 
-resource "aws_s3_bucket" "tf_course" {
+resource "aws_s3_bucket" "prod-tf-course" {
   bucket = "tfs3-tasha-20201103"
   acl = "private"
 }
+
+resource "aws_default_vpc" "default"{
+}
+
 
 
